@@ -48,9 +48,5 @@ jobs:
     needs: deploy
     runs-on: ubuntu-20.04
     steps:
-    - uses: actions/checkout@master
     - name: curl
-      uses: enflo/curl-action@master
-      with:
-        curl: http://itkmitl.bookinfo.dev.opsta.net/student29/ratings/health
-      run: grep "Ratings is working"
+      run: curl http://itkmitl.bookinfo.dev.opsta.net/student29/ratings/health | grep "Ratings is working"
