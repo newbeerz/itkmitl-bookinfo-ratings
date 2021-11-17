@@ -53,3 +53,5 @@ jobs:
       uses: enflo/curl-action@master
       with:
         curl: http://itkmitl.bookinfo.dev.opsta.net/student29/ratings/health
+      run: |
+        grep "Ratings is working"
